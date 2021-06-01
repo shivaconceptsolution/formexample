@@ -1,0 +1,27 @@
+{% extends 'formexample/master.html' %}
+{% block maincontent %}
+<form action="" method="POST">
+	{% csrf_token %}
+Enter First Subject Marks <br>
+<input type="text" name="txtnum1" />
+<br><br>
+Enter Second Subject marks<br>
+<input type="text" name="txtnum2"/>
+<br><br>
+Enter Third Subject marks<br>
+<input type="text" name="txtnum3" />
+<br><br>
+Enter Fourth Subject marks<br>
+<input type="text" name="txtnum4" />
+<br><br>
+Enter Fifth Subject marks<br>
+<input type="text" name="txtnum5"  />
+<br><br>
+<input type="submit" name="btnsubmit" value="Calculate" />
+
+
+</form>	
+
+{{key}}
+
+{% endblock  %}
