@@ -71,7 +71,7 @@ def marksheet(request):
                   result = "SUPPL "
             else:
                   result = "FAIL"
-        return render(request,"formexample/marksheet.html",{"key":result})
+        return render(request,"formexample/marksheet.html",{"key":result,"m1":request.POST["txtnum1"],"m2":request.POST["txtnum2"],"m3":request.POST["txtnum3"],"m4":request.POST["txtnum4"],"m5":request.POST["txtnum5"],"data":mark})
     return render(request,"formexample/marksheet.html")
 
 def feedback(request):
