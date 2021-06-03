@@ -1,0 +1,50 @@
+{% extends 'formexample/master.html' %}
+{% block maincontent %}
+<h1>Feedback Form</h1>
+<form action="" method="post">
+{% csrf_token %}
+
+<input type="text" name="txtname" placeholder="Enter fullname" />
+<br><br>
+Select Gender
+<br><br>
+<input type="radio" name="gender" value="Male" />Male
+<input type="radio" name="gender" value="Female" />Female<br><br>
+Select Course
+<br><br>
+<input type="checkbox" name="course[]" value="C" />C
+<input type="checkbox" name="course[]" value="CPP" />CPP
+<input type="checkbox" name="course[]" value="DS" />DS<br><br>
+
+Select Feedback<br>
+<select name="feed">
+	<option value="">Select Feedback </option>
+	<option value="Best">Best</option>
+	<option value="Good">Good</option>
+	<option value="Average">Average</option>
+
+
+
+</select>
+<br><br>
+Select Branch
+<br>
+
+<select name="branch[]" multiple="true">
+	<option value="">Select Branch</option>
+	<option value="Palasia">Palasia</option>
+	<option value="VijayNagar">VijayNagar</option>
+	<option value="Bhawarkua">BhawarKua</option>
+
+
+
+</select>
+<br><br>
+<input type="submit" name="btnsubmit" value="Submit" />
+
+</form>	
+<br>
+<hr>
+<br><br>
+{{key}}
+{% endblock  %}
