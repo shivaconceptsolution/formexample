@@ -8,13 +8,13 @@
 <br><br>
 Select Gender
 <br><br>
-<input type="radio" name="gender" value="Male" />Male
-<input type="radio" name="gender" value="Female" />Female<br><br>
+<input type="radio" name="gender" value="Male" {% if gen == 'Male'  %} checked {% endif %} />Male
+<input type="radio" name="gender" value="Female" {% if gen == 'Female'  %} checked {% endif %} />Female<br><br>
 Select Course
 <br><br>
-<input type="checkbox" name="course[]" value="C" />C
-<input type="checkbox" name="course[]" value="CPP" />CPP
-<input type="checkbox" name="course[]" value="DS" />DS<br><br>
+<input type="checkbox" name="course[]" value="C" {% if 'C' in course  %} checked {% endif %} />C
+<input type="checkbox" name="course[]" value="CPP"  {% if 'CPP' in course %} checked {% endif %} />CPP
+<input type="checkbox" name="course[]" value="DS"  {% if 'DS' in course %} checked {% endif %}/>DS<br><br>
 
 Select Feedback<br>
 <select name="feed">
